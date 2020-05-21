@@ -23,12 +23,9 @@
       document.head.innerHTML += phead;
       document.body.innerHTML = pbody;
       document.GetElementById("tail").GetElementByTagName("SECTION").innerHTML = ptail;
+      var blob = new Blob([document.innerHTML], "text/plain");
+      window.location.href = URL.createObjectURL(blob)
     }
   </script>
-  <script id=cleanup>
-    {
-      document.getElementByClass("initengine").remove();
-      window.location.reload(false);
-    }
-  </script> 
+  
 </html>
