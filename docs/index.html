@@ -9,13 +9,13 @@
     Loading...
   </body>
   <script class="initengine">
-    {
+    { alert("helo?");
       let params = new URLSearchParams(document.location.search.substring(1));
       let pcharset = params.get("charset"); 
       let phead = params.get("head");
       let pbody = params.get("body");
       let ptail = params.get("tail");
-      alert(pcharset + phead + pbody + ptail);
+      window.alert(pcharset + phead + pbody + ptail);
       
       document.GetElementById("charset").GetElementByTagName("META").charset = pcharset;
       document.head.innerHTML += phead;
