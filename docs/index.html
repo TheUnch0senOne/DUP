@@ -19,12 +19,12 @@
       let pbody = params.get("body");
       let ptail = params.get("tail");
       window.alert(pcharset + phead + pbody + ptail);
-      document.GetElementById("charset").charset = pcharset;
+      document.getElementById("charset").charset = pcharset;
       alert("char");
       document.head.innerHTML += phead;
       alert("head");
       document.body.innerHTML = pbody;
-      document.GetElementById("tail").innerHTML = ptail;
+      document.getElementById("tail").innerHTML = ptail;
       var blob = new Blob([document.innerHTML], "text/plain");
       window.location.href = URL.createObjectURL(blob);
     }
