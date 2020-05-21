@@ -18,15 +18,11 @@
       let phead = params.get("head");
       let pbody = params.get("body");
       let ptail = params.get("tail");
-      window.alert(pcharset + phead + pbody + ptail);
-      document.getElementById("charset").charset = pcharset;
-      alert("char");
+      document.getElementById("charset").setAttribute("charset", pcharset);
       document.head.innerHTML += phead;
-      alert("head");
       document.body.innerHTML = pbody;
       document.getElementById("tail").innerHTML = ptail;
-      var blob = new Blob([document.innerHTML], "text/plain");
-      window.location.href = URL.createObjectURL(blob);
+     
     }
   </script>
   
