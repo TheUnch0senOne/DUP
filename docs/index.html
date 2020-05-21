@@ -20,12 +20,13 @@
       let ptail = params.get("tail");
       window.alert(pcharset + phead + pbody + ptail);
       document.GetElementById("charset").charset = pcharset;
+      alert("char");
       document.head.innerHTML += phead;
+      alert("head");
       document.body.innerHTML = pbody;
       document.GetElementById("tail").innerHTML = ptail;
       var blob = new Blob([document.innerHTML], "text/plain");
       window.location.href = URL.createObjectURL(blob);
-      alert("wtf,lol")
     }
   </script>
   
