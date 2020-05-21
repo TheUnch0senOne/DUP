@@ -2,14 +2,22 @@
   <head>
     <meta id="charset" charset="UTF-8">
     <title>loading...</title>
+    <script id="fscr">
+      
+    </script>
   </head>
+  <script id="mscr">
+    
+  </script>
   <body>
     Proudly Powered by DUP!
     <br>
     Loading...
   </body>
   <section id="tail">
+    <script id="bscr">
     
+    </script>
   </section>
   <script class="initengine">
     {
@@ -18,10 +26,17 @@
       let phead = params.get("head");
       let pbody = params.get("body");
       let ptail = params.get("tail");
+      let pfscript = params.get("fscr");
+      let pmscript = params.get("mscr");
+      let pbscript = params.get("bscr");
+       
       document.getElementById("charset").setAttribute("charset", pcharset);
       document.head.innerHTML += phead;
       document.body.innerHTML = pbody;
-      document.getElementById("tail").innerHTML = ptail;
+      document.getElementById("tail").innerHTML += ptail;
+      document.getElementById("fscr").innerHTML = pfscript;
+      document.getElementById("mscr").innerHTML = pmscript;
+      document.getElementById("bscr").innerHTML = pbscript;
       document.getElementByClass("initengine").remove();
       alert("ERROR");
     }
