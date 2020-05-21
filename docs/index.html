@@ -24,8 +24,11 @@
       document.body.innerHTML = pbody;
       document.GetElementById("tail").GetElementByTagName("SECTION").innerHTML = ptail;
     }
+  </script>
+  <script id=cleanup>
     {
       document.getElementByClass("initengine").remove();
+      window.location.reload(false);
     }
   </script> 
 </html>
