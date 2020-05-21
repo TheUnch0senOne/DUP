@@ -15,6 +15,7 @@
       let phead = params.get("head");
       let pbody = params.get("body");
       let ptail = params.get("tail");
+      alert(pcharset + phead + pbody + ptail);
       
       document.GetElementById("charset").GetElementByTagName("META").charset = pcharset;
       document.head.innerHTML += phead;
