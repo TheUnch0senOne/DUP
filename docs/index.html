@@ -1,32 +1,33 @@
 <html>
   <head>
-    <script></script>
-    <script class="">var DUP-ERROR-HANDLER = function(){alert("Error, url misconfigured, you will be redirected back to the referrer");
-        window.location.replace(document.referrer);}</script>
-    <meta id="initcharset" charset="UTF-8">
-    <title><script>document</script></title>
+    <meta id="charset" charset="UTF-8">
+    <title>loading...</title>
   </head>
   <body>
-    <h1 id="remove" hidden=true>loading/underfined</h1>
+    Proudly Powered by DUP!
+    <br>
+    Loading...
   </body>
-  <section class="initengine">
-    <script>
-      const urlQuery = window.location.search;
-      if (decode.URI(urlQuery) = urlQuery) {
-        var result = true;
-      } else {
-        alert("Error, url misconfigured, you will be redirected back to the referrer");
-        window.location.replace(document.referrer)
-      }
+  <script class="initengine">
+    {
+      let params = new URLSearchParams(document.location.search.substring(1));
+      let pcharset = params.get("charset"); 
+      let phead = params.get("head");
+      let pbody = params.get("body");
+      let ptail = params.get("tail");
       
-    </script>
-    <script>
-      {
-        let remove;0
-        removescr.remove = document.getElementById("remove");
-        removescr.init = document.getElementByClass("initengine");
-        try{removescr.remove();}finally{remove.scr = undefined;};
-      }
-    </script>
+      document.GetElementById("charset").GetElementByTagName("META").charset = pcharset;
+      document.head.innerHTML += phead;
+      document.body.innerHTML = pbody;
+      document.GetElementById("tail").GetElementByTagName("SECTION").innerHTML = ptail;
+    }
+    {
+      let removescr;      
+      removescr = document.getElementByClass("initengine");
+      try{removescr.remove();}finally{remove.scr = undefined;};
+    }
+  </script>
+  <section id="tail">
+    
   </section>
 </html>
