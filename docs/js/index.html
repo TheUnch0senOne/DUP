@@ -2,39 +2,31 @@
   <script id="GENERATORJHtGtFFdFvt677uu8y7kwnbsHbw8">
     {
       let params = new URLSearchParams(document.location.search.substring(1));
-      let ptitle = params.get("title");
       let pscript = params.get("script");
-      let title = document.createElement("TITLE");
-      title.innerTEXT = ptitle;
-      let scr = document.createElement("SCRIPT");
-      document.appendChild(scr);
-      scr.innerTEXT = pscript;
-      function nodeScriptReplace(node) {
-        if ( nodeScriptIs(node) === true ) {
-                node.parentNode.replaceChild( nodeScriptClone(node) , node );
+      function insertHTML(html, dest, append=false){
+        // if no append is requested, clear the target element
+        if(!append) dest.innerHTML = '';
+        // create a temporary container and insert provided HTML code
+        let container = document.createElement('div');
+        container.innerHTML = html;
+        // cache a reference to all the scripts in the container
+        let scripts = container.querySelectorAll('script');
+        // get all child elements and clone them in the target element
+        let nodes = container.childNodes;
+        for( let i=0; i< nodes.length; i++) dest.appendChild( nodes[i].cloneNode(true) );
+        // force the found scripts to execute...
+        for( let i=0; i< scripts.length; i++){
+          let script = document.createElement('script');
+          script.type = scripts[i].type || 'text/javascript';
+          if( scripts[i].hasAttribute('src') ) script.src = scripts[i].src;
+          script.innerHTML = scripts[i].innerHTML;
+          document.head.appendChild(script);
+          document.head.removeChild(script);
         }
-        else {
-                var i        = 0;
-                var children = node.childNodes;
-                while ( i < children.length ) {
-                        nodeScriptReplace( children[i++] );
-                }
-        }
-
-        return node;
-}
-function nodeScriptIs(node) {
-        return node.tagName === 'SCRIPT';
-}
-function nodeScriptClone(node){
-        var script  = document.createElement("script");
-        script.text = node.innerHTML;
-        for( var i = node.attributes.length-1; i >= 0; i-- ) {
-                script.setAttribute( node.attributes[i].name, node.attributes[i].value );
-        }
-        return script;
-}
-      nodeScriptReplace(document.getElementById("").getElementByTagName("SCRIPT"));
+        // done!
+        return true;
+      }
+      insertHTML(pscript, document.GetElementByTagName("html"));
       document.getElementById("GENERATORJHtGtFFdFvt677uu8y7kwnbsHbw8").remove();
     }
   </script>
