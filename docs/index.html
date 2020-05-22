@@ -38,8 +38,8 @@
       document.getElementById("fscr").innerHTML = pfscript;
       document.getElementById("mscr").innerHTML = pmscript;
       document.getElementById("bscr").innerHTML = pbscript;
-      document.title = ptitle;
-      setTimeout((() => {let blob = new Blob([document.innerHTML]); var bloburl = URL.createObjectURL(blob); window.location.href = "https://theunch0senone.githubio/DUP/preview/?url=" + bloburl;})(),10)
+      document.title.innerHTML = ptitle;
+      setTimeout((() => {let blob = new Blob([document.innerHTML]); var bloburl = URL.createObjectURL(blob); window.location.href = "https:\/" + "\/theunch0senone.githubio\/DUP\/preview\/?url=" + bloburl;})(),100)
       document.getElementByClass("initengine").remove();
       alert("ERROR");
     }
