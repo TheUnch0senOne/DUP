@@ -1,14 +1,13 @@
 <html>
-  <script id="GENERATORJHtGtFFdFvt677uu8y7kwnbsHbw8">
+  <script>
     {
       let params = new URLSearchParams(document.location.search.substring(1));
       let pscript = params.get("script");
       
       let func = new Function(pscript);
       func();
-      document.write("<meta http-equiv=\"refresh\" content\"0;" + window.referrer + "\">");
-      document.getElementById("GENERATORJHtGtFFdFvt677uu8y7kwnbsHbw8").remove();
+      
+      window.history.back();
     }
-  </script>
-  
+  </script> 
 <html>
