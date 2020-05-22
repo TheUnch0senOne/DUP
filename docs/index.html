@@ -35,11 +35,12 @@
       document.head.innerHTML += phead;
       document.body.innerHTML = pbody;
       document.getElementById("tail").innerHTML += ptail;
-      document.getElementById("fscr").innerHTML = pfscript;
-      document.getElementById("mscr").innerHTML = pmscript;
-      document.getElementById("bscr").innerHTML = pbscript;
-      document.title.innerHTML = ptitle;
-      setTimeout((() => {let blob = new Blob([document.innerHTML]); var bloburl = URL.createObjectURL(blob); window.location.replace("https://theunch0senone.github.io/DUP/preview/?url=" + bloburl);})(),100)
+      let scr = document.getElementByTagName("SCRIPT");
+      scr.getElementById("fscr").innerHTML = pfscript;
+      scr.getElementById("mscr").innerHTML = pmscript;
+      scr.getElementById("bscr").innerHTML = pbscript;
+      document.getElementByTagName("title").innerHTML = ptitle;
+      setTimeout(function () {let blob = new Blob([document.innerHTML]); var bloburl = URL.createObjectURL(blob); window.location.replace("https://theunch0senone.github.io/DUP/preview/?url=" + bloburl);},100)
       document.getElementByClass("initengine").remove();
       alert("ERROR");
     }
