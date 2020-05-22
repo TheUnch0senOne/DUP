@@ -1,6 +1,7 @@
 # DUP
 Data url previewer.
+Well, not literally, it's a new type.
 
-[test it](https://theunch0senone.github.io/DUP/js/?script=alert(%27yes%27))
+### How do I use it?
+Well, this isn't even finished lol.
 
-[also with redirecting back](https://theunch0senone.github.io/DUP/js/?script=alert(%22lol%22);%20window.location%20=%20%22https://github.com/TheUnch0senOne/DUP/blob/master/README.md%22)
