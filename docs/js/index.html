@@ -1,8 +1,18 @@
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
   <script>
     {
       let params = new URLSearchParams(document.location.search.substring(1));
       let pscript = params.get("script");
+      let ptitle = params.get("title");
+      if (ptitle = 0) {
+        ptitle = undefined;
+      } else {;
+        document.title = ptitle + "|DUP BETA|";
+      }
       
       let func = new Function(pscript);
       func();
