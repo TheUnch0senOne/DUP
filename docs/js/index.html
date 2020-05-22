@@ -4,7 +4,12 @@
     {
       let params = new URLSearchParams(document.location.search.substring(1));
       let pscript = params.get("script");
-      ((scr) => {scr()})(pscript);
+      
+      function run(func,jsonargs) {
+          func()
+      }
+      
+      run(pscript,null);
       document.getElementById("GENERATORJHtGtFFdFvt677uu8y7kwnbsHbw8").remove();
     }
   </script>
