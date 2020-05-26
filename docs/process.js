@@ -1,4 +1,14 @@
+(() => {
+  window.request = (url, type) => {
+    const http = new XMLHttpRequest()
 
+    http.open(type, url)
+    http.send()
+
+    http.onload = () => {window.res = http.responseText);}
+    return(window.res).then()
+  }
+})();
 (() => {
   window.compressor = {}; 
   compressor.urlprocess = (str) => {
@@ -8,3 +18,9 @@
     return str.replace("-A", /\!/g).replace("-B", /#/g).replace("-C", /\$/g).replace("-D", /%/g).replace("-E", /&/g).replace("-F", /\(/g).replace("-G", /\)/g).replace("-H", /\*/g).replace("-I", /\+/g).replace("-J", /,/g).replace("-K", /\./g).replace("-L", /\//g).replace("-M", /\:/g).replace("-N", /;/g).replace("-O", /\</g).replace("-P", /\=/g).replace("-Q", /\>/g).replace("-R", /\?/g).replace("-S", /@/g).replace("-T", /\[/g).replace("-U", /\]/g).replace("-V", /\^/g).replace("-W", /_/g).replace("-X", /`/g).replace("-Y", /\{/g).replace("-Z", /\|/g).replace("-z", /\}/g);
   };
 })();
+(() => {
+  window.grc = {};
+  grc.sitekey = "6LcOSPwUAAAAAC7tW79k-2QbW8ta0Kjho1BI1dPL";
+  grc.scripts = {};
+  grc.scripts.load = '<script src="https://www.google.com/recaptcha/api.js"></script>'
+)();
