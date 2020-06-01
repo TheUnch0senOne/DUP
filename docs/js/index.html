@@ -7,9 +7,9 @@
     {
       let params = new URLSearchParams(document.location.search.substring(1));
       let p = {};
-      let p[scr] = params.get("script");
-      let p[t] = params.get("title");
-      let p[redir] = params.get("redir");
+      p[scr] = params.get("script");
+      p[t] = params.get("title");
+      p[redir] = params.get("redir");
       if (p[t] = 0) {
         p[t] = undefined;
       } else {
