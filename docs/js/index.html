@@ -19,7 +19,7 @@
       let func = new Function(p[1]);
       func();
       
-      if (p[3] == false) {console.Log("canceled");} else {window.history.back();}
+      if (parseBoolean(p[3]) == false) {console.Log("canceled");} else {window.history.back();}
       
     }
   </script> 
