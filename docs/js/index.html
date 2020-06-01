@@ -8,6 +8,7 @@
       let params = new URLSearchParams(document.location.search.substring(1));
       let pscript = params.get("script");
       let ptitle = params.get("title");
+      let predir = params.get("redir")
       if (ptitle = 0) {
         ptitle = undefined;
       } else {;
@@ -17,7 +18,11 @@
       let func = new Function(pscript);
       func();
       
-      window.history.back();
+      if (predir != false) {
+        console.Log("predir = false")
+      } else
+        window.history.back();
+      }
     }
   </script> 
 <html>
