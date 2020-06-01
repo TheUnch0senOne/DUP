@@ -11,17 +11,17 @@
       let predir = params.get("redir");
       if (ptitle = 0) {
         ptitle = undefined;
-      } else {;
+      } else {
         document.title = ptitle + "|DUP BETA|";
       }
       
       let func = new Function(pscript);
       func();
       
-      if (predir != false) {
-        window.history.back();
+      if (predir == false) {
+        console.Log("done");
       } else
-        console.Log("auto redir = false")
+        window.history.back();
       }
     }
   </script> 
