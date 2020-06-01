@@ -9,7 +9,7 @@
       let p = {};
       p[1] = params.get("script");
       p[2] = params.get("title");
-      p[3] = (params.get("redir") == "true");
+      p[3] = !(params.get("redir") == "true");
       if (p[2] = 0) {
         p[2] = undefined;
       } else {
