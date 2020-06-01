@@ -6,19 +6,20 @@
   <script>
     {
       let params = new URLSearchParams(document.location.search.substring(1));
-      let pscript = params.get("script");
-      let ptitle = params.get("title");
-      if (ptitle = 0) {
-        ptitle = undefined;
+      let p = {};
+      let p[scr] = params.get("script");
+      let p[t] = params.get("title");
+      let p[redir] = params.get("redir");
+      if (p[t] = 0) {
+        p[t] = undefined;
       } else {
-        document.title = ptitle + "|DUP BETA|";
+        document.title = p[t] + "|DUP BETA|";
       }
       
-      let func = new Function(pscript);
+      let func = new Function(p[scr]);
       func();
       
-      
-        window.history.back();
+      if (p[redir] == false) {console.Log("canceled");} else {window.history.back();}
       
     }
   </script> 
