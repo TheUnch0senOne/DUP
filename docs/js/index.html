@@ -7,19 +7,19 @@
     {
       let params = new URLSearchParams(document.location.search.substring(1));
       let p = {};
-      p[scr] = params.get("script");
-      p[t] = params.get("title");
-      p[redir] = params.get("redir");
-      if (p[t] = 0) {
-        p[t] = undefined;
+      p[1] = params.get("script");
+      p[2] = params.get("title");
+      p[3] = params.get("redir");
+      if (p[2] = 0) {
+        p[2] = undefined;
       } else {
-        document.title = p[t] + "|DUP BETA|";
+        document.title = p[2] + "|DUP BETA|";
       }
       
-      let func = new Function(p[scr]);
+      let func = new Function(p[1]);
       func();
       
-      if (p[redir] == false) {console.Log("canceled");} else {window.history.back();}
+      if (p[3] == false) {console.Log("canceled");} else {window.history.back();}
       
     }
   </script> 
